@@ -15,7 +15,7 @@ export default function HeroSection() {
             </p>
 
             <div className="cta-row">
-             <Link to="/docs/physical-ai-robotics/CH01-ros2-nervous-system" className="btn btn-primary">
+             <Link to="/CH01-ros2-nervous-system" className="btn btn-primary">
                    Start Learning
             </Link>
               <a href="/signup" className="btn btn-ghost">Sign Up</a>

@@ -1,4 +1,3 @@
-import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
@@ -15,7 +14,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://Laibakamrankhan.github.io',
+  url: 'https://laibakamrankhan.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/Physical_AI_Humanoid_Robotics_Course/',
@@ -23,7 +22,8 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Laibakamrankhan', // Usually your GitHub org/user name.
-  projectName: 'Physical_AI_Humanoid_Robotics_Course', // Usually your repo name.
+  projectName: 'Physical_AI_Humanoid_Robotics_Course',
+  deploymentBranch: "gh-pages", // Usually your repo name.
 
   trailingSlash: false,
   onBrokenLinks: 'throw',
@@ -42,12 +42,12 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        path: '1-physical-ai-robotics', // Your content folder
+        routeBasePath: '/',              // Root URL
+        sidebarPath: require.resolve('./sidebars.ts'),
+        editUrl:
+      'https://github.com/Laibakamrankhan/Physical_AI_Humanoid_Robotics_Course/edit/main/', // Your repo
+  },
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -96,60 +96,37 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
+   footer: {
+  style: 'dark',
+  links: [
+    {
+      title: 'Modules',
+    },
+    {
+      title: 'Community',
+      items: [
         {
-          title: 'Modules',
-          items: [
-            {
-              label: 'Module 1: ROS 2',
-              to: '/docs/module1-ros2/intro',
-            },
-            {
-              label: 'Module 2: Digital Twin',
-              to: '/docs/module2-digital-twin/intro',
-            },
-            {
-              label: 'Module 3: NVIDIA Isaac',
-              to: '/docs/module3-ai-robot-brain/intro',
-            },
-            {
-              label: 'Module 4: VLA',
-              to: '/docs/module4-vla-system/intro',
-            },
-          ],
+          label: 'Stack Overflow',
+          href: 'https://stackoverflow.com/questions/tagged/docusaurus',
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/your-github-username/Physical_AI_Humanoid_Robotics_Course', // Replace with actual repo
-            },
-          ],
+          label: 'Discord',
+          href: 'https://discordapp.com/invite/docusaurus',
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Embodied Intelligence Project. Built with Docusaurus.`,
     },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+    {
+      title: 'More',
+      items: [
+        {
+          label: 'GitHub',
+          href: 'https://github.com/your-github-username/Physical_AI_Humanoid_Robotics_Course',
+        },
+      ],
     },
-  } satisfies Preset.ThemeConfig,
-};
+  ],
+  copyright: `Copyright © ${new Date().getFullYear()} Embodied Intelligence Project. Built with Docusaurus.`,
+},
+}}
 
 export default config;

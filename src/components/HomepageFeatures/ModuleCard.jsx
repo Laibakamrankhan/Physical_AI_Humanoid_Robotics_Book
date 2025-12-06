@@ -10,7 +10,7 @@ return (
 <p className="module-card-desc">{desc}</p>
 <Link
     className="module-card-link"
-    to="/docs/physical-ai-robotics/Modules/module1-contract"
+    to="/Modules/module1-contract"
   >
     Explore →
   </Link>

@@ -50,16 +50,6 @@ The transition from ROS 1 to ROS 2 was driven by a need to address challenges in
 
 This table highlights why ROS 2 is the preferred framework for contemporary and future robotics projects, especially those involving advanced AI, humanoid systems, and deployment in complex, real-world scenarios.
 
-:::note
-***Required Exercise: Implement a simple Python agent that publishes velocity commands to a ROS 2 topic (Placeholder)***
-
-_An exercise guiding the user to create a Python ROS 2 node that acts as a simple agent. This agent should:
-- Initialize as an `rclpy.Node`.
-- Create a publisher for a `geometry_msgs/msg/Twist` message (or a similar joint command message).
-- Implement a timer callback to periodically publish velocity commands (e.g., constant forward velocity, simple turn, or a sinusoidal motion).
-- Optionally, include a subscriber for a simulated sensor (e.g., from Gazebo) to make decisions based on feedback._
-:::
-
 ## 1.2 Setting Up Your ROS 2 Environment
 
 To begin developing with ROS 2, you'll need to set up a suitable development environment. This typically involves installing ROS 2 on a compatible operating system, creating a workspace, and organizing your code into packages. For this book, we will primarily focus on Ubuntu Linux, which is the most common platform for ROS 2 development.
